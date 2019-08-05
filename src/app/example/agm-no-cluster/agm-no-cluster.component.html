@@ -1,0 +1,24 @@
+<agm-map [latitude]="3.2028"
+         [longitude]="73.2207"
+         (mapClick)="mapClicked()"
+>
+  <agm-marker *ngFor="let place of places" (markerClick)="markerClicked(place)"
+              [latitude]="place.latitude"
+              [longitude]="place.longitude"
+              [iconUrl]="place.clicked ? 'assets/svg/marker--clicked.svg': 'assets/svg/marker.svg'"
+  >
+    <agm-snazzy-info-window (afterClose)="infoWindowClosed(place)"
+                            [maxWidth]="280"
+                            [closeWhenOthersOpen]="true"
+                            [closeOnMapClick]="true"
+                            [border]="false"
+                            [shadow]="false"
+                            [maxHeight]="400"
+    >
+      <ng-template>
+        <p>{{ place.name }}</p>
+        <p>{{ place.description }}</p>
+      </ng-template>
+    </agm-snazzy-info-window>
+  </agm-marker>
+</agm-map>

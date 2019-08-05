@@ -1,0 +1,5 @@
+<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle r="25" fill="#494bb1" cx="25" cy="25"></circle>
+  <circle r="20" fill="#ffffff" cx="25" cy="25"></circle>
+  <text x="6" y="28" fill="black" font-size="0.6em">Click me!</text>
+</svg>
