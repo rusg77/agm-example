@@ -4,9 +4,10 @@ import { AgmNoClusterComponent } from './agm-no-cluster/agm-no-cluster.component
 import { AgmCoreModule } from '@agm/core';
 import { AgmSnazzyInfoWindowModule } from '@agm/snazzy-info-window';
 import { AgmJsMarkerClustererModule } from '@agm/js-marker-clusterer';
+import { AgmClusterComponent } from './agm-cluster/agm-cluster.component';
 
 @NgModule({
-  declarations: [AgmNoClusterComponent],
+  declarations: [AgmNoClusterComponent, AgmClusterComponent],
   imports: [
     CommonModule,
 
@@ -17,7 +18,7 @@ import { AgmJsMarkerClustererModule } from '@agm/js-marker-clusterer';
       apiKey: ''
     }),
   ],
-  exports: [AgmNoClusterComponent]
+  exports: [AgmNoClusterComponent, AgmClusterComponent]
 })
 export class ExampleModule {
 }

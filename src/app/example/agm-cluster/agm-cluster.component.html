@@ -3,6 +3,10 @@
          (mapClick)="mapClicked()"
          [zoom]="8"
 >
+  <agm-marker-cluster
+    [styles]="clusterStyles"
+    [gridSize]="80"
+  >
   <agm-marker *ngFor="let place of places" (markerClick)="markerClicked(place)"
               [latitude]="place.latitude"
               [longitude]="place.longitude"
@@ -22,4 +26,5 @@
       </ng-template>
     </agm-snazzy-info-window>
   </agm-marker>
+  </agm-marker-cluster>
 </agm-map>
