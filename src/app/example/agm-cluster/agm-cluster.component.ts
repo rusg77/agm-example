@@ -11,6 +11,8 @@ export class AgmClusterComponent implements OnInit {
 
   places = places;
   currentClicked: Place;
+  mapHidden = false;
+
   clusterStyles: ClusterStyle[] = [{
     textColor: '#494bb1',
     textSize: 16,
@@ -43,5 +45,9 @@ export class AgmClusterComponent implements OnInit {
     if (this.currentClicked) {
       this.currentClicked.clicked = false;
     }
+  }
+
+  hideMap() {
+    this.mapHidden = true;
   }
 }

@@ -2,6 +2,7 @@
          [longitude]="73.2207"
          (mapClick)="mapClicked()"
          [zoom]="8"
+         [hidden]="mapHidden"
 >
   <agm-marker *ngFor="let place of places" (markerClick)="markerClicked(place)"
               [latitude]="place.latitude"
@@ -19,6 +20,7 @@
       <ng-template>
         <p>{{ place.name }}</p>
         <p>{{ place.description }}</p>
+        <button (click)="hideMap()">Hide map</button>
       </ng-template>
     </agm-snazzy-info-window>
   </agm-marker>

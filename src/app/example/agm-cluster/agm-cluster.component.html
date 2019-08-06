@@ -2,6 +2,7 @@
          [longitude]="73.2207"
          (mapClick)="mapClicked()"
          [zoom]="8"
+         [hidden]="mapHidden"
 >
   <agm-marker-cluster
     [styles]="clusterStyles"
@@ -23,6 +24,7 @@
       <ng-template>
         <p>{{ place.name }}</p>
         <p>{{ place.description }}</p>
+        <button (click)="hideMap()">Hide map</button>
       </ng-template>
     </agm-snazzy-info-window>
   </agm-marker>

@@ -10,6 +10,7 @@ export class AgmNoClusterComponent implements OnInit {
 
   places = places;
   currentClicked: Place;
+  mapHidden = false;
 
   constructor() {
   }
@@ -35,5 +36,9 @@ export class AgmNoClusterComponent implements OnInit {
     if (this.currentClicked) {
       this.currentClicked.clicked = false;
     }
+  }
+
+  hideMap() {
+    this.mapHidden = true;
   }
 }
